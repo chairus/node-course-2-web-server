@@ -44,7 +44,7 @@ hbs.registerHelper("screamIt", (text) => {
 app.get("/", (req, res) => {
     res.render("home", {
         pageTitle: "Home page",
-        welcomeMessage: "Welcome to <strong>Cyrus Villacampa</strong>'s home page",
+        message: "Welcome to <strong>Cyrus Villacampa</strong>'s home page"
     });
 });
 
@@ -52,8 +52,15 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
     res.render("about", {
         pageTitle: "About page",
-        name: "Cyrus Villacampa",
+        message: "This is <strong>Cyrus Villacampa</strong>'s about page."
     });
+});
+
+app.get("/projects", (req, res) => {
+    res.render("projects", {
+        pageTitle: "Portfolio page",
+        message: "Welcome to the portfolio page of <strong>Cyrus Villacampa</strong>"
+    })
 });
 
 app.get("/bad", (req, res) => {
